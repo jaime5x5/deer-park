@@ -1,0 +1,1726 @@
+/*
+Theme Name: Deer Park Chamber of Commerce
+Theme URI: http://dev4dollars.com
+Author: Jaime Williams
+Author URI: http://dev4dollars.com
+Description: Designed to assist users and administrators in the delivery of relevant and responsive information.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Deer Park Washington 
+*/
+
+ /* Globals */
+* {margin:0; padding:0}
+html #wpadminbar {
+	position: fixed;
+}
+body {
+	font-family: "lato",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	margin:0 auto;
+}
+
+.row {
+	margin:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 400;
+	color: #3C190A;
+}
+h3 {
+	font-size: 21px;
+}
+p {
+	font-size: 18px;
+	color: #3C190A;
+	line-height: 20px;
+}
+a {
+	color: #875226;
+}
+a:hover {
+	color: #6B3F1F;
+	text-decoration: none;
+}
+li {
+	font-size: 18px;
+}
+.main-headline {
+	font-size: 72px;
+	color: #3C190A;
+	line-height: 50px;
+}
+.reverse-headline {
+	color:#fff;
+	font-size: 50px;
+}
+div[id^="attachment_"] {
+	float: left;
+	position: relative;
+	margin: 0px -5px;
+}
+div[id^="attachment_"] p.wp-caption-text {
+	text-align: center;
+	top: 0;
+	left:0;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 800;
+	background: rgba(0,0,0,0.5);
+	z-index: 20;
+	position: absolute;
+	display: none;
+	width: 180px;
+	height: 180px;
+	padding-top: 85px;
+	cursor: pointer;
+}
+.navbar-fix {
+	margin-top: 122px;
+}
+.caption-container {
+	position: absolute;
+	top:50%;
+	right: 50%;
+}
+.caption-container h3 {
+	color: #fff;
+	font-size: 30px;
+	text-align: right;
+	width: 40%;
+	position: fixed;
+	z-index: 400;
+	right: 25%;
+	bottom: 15%;
+	/*opacity: 0;*/
+	margin-bottom:3%;
+	padding:15px;
+	border-radius: 25px;
+}
+
+span.dark {
+  color: #3C190A !important;
+}
+/* Single Page */
+.container {
+	width: 90%;
+}
+.navbar {
+	border: none;
+	z-index: 499;
+}
+.navbar-toggle .icon-bar{
+	height: 8px;
+	width: 54px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+	margin-top: 5px;
+}
+.navbar-inverse {
+	background : #00D7E8;
+	/* IE10 */
+	background: -ms-linear-gradient(left,rgba(0, 215, 232, 0.35), rgba(0, 215, 232, 0.45));
+	/* For Safari 5.1 to 6.0 */
+	background: -webkit-linear-gradient(left,rgba(0, 215, 232, 0.35), rgba(0, 215, 232, 0.45));
+	/* For Opera 11.1 to 12.0 */
+	background: -o-linear-gradient(left,rgba(0, 215, 232, 0.35), rgba(0, 215, 232, 0.45));
+	/* For Fx 3.6 to 15 */
+	background: -moz-linear-gradient(left,rgba(0, 215, 232, 0.35), rgba(0, 215, 232, 0.45));
+	/* Standard syntax */
+	background: linear-gradient(left,rgba(0, 215, 232, 0.35), rgba(0, 215, 232, 0.45));
+	width: 100%;
+	max-height: 130px;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #2F2F2F;
+	max-height: 103px;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background: transparent;
+}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus {
+	background: rgba(0, 215, 232, 1);
+}
+.navbar>.container .navbar-brand {
+	margin: 0;
+}
+.current-menu-item, .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+	background-color: rgba(0, 215, 232, .75 );
+}
+
+.navbar-inverse .navbar-toggle {
+	background: #00D7E8;
+	border: none;
+	margin: 0;
+	padding: 47px 27px;
+	border-radius: 0;
+}
+.nav>li>a {
+	font-size: 18px;
+	padding: 64px 20px;
+}
+.navbar-inverse .navbar-nav>li:nth-child(1) {
+	background : rgba(0, 215, 232, .25);
+}
+.navbar-inverse .navbar-nav>li:nth-child(2) {
+	background : rgba(0, 215, 232, .35);
+}
+.navbar-inverse .navbar-nav>li:nth-child(3) {
+	background : rgba(0, 215, 232, .45);
+}
+.navbar-inverse .navbar-nav>li:nth-child(4) {
+	background : rgba(0, 215, 232, .55);
+}
+.navbar-inverse .navbar-nav>li:nth-child(5) {
+	background : rgba(0, 215, 232, .65);
+	padding: 0 150px 0 0;
+}
+.nav-button {
+	background: rgba(188,138,89, 1);
+	visibility: hidden;
+}
+.navbar-collapse {
+	max-height: 100%;
+	max-width: 100%;
+	overflow-y: visible;
+}
+.navbar-collapse.in {
+	padding: 0;
+	margin: 0;
+}
+.navbar-collapse ul {
+	float: right;
+	margin-right: -13.6%;
+	text-transform: uppercase;
+}
+.navbar-brand {
+	height: auto;
+}
+.navbar-toggle {
+	float: right;
+}
+.secondary-nav-toggle {
+	display: block;
+}
+.secondary-navbar {
+	position: absolute;
+}
+.navbar-brand img {
+	max-height: 130px;
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+	margin-right: 0;
+	margin-left: 3%;
+}
+.wga_secondary_nav {
+	display: none;
+}
+.wrapper{
+	position: relative;
+	margin-top: 13%;
+	left: 10%;
+	width: 300px;
+	height: 350px;
+	background: rgba( 200, 218, 192, .9);
+	padding: 20px;
+	border: 2px inset #544741;
+	border-radius: 15px;
+	box-shadow: 2px 2px 3px rgb(174, 174, 174);
+} 
+.weatherForecast {
+	padding: 5px;
+}
+.weatherReport {
+	padding: 5px;
+}
+.weatherList {
+	padding: 5px;
+}
+.weatherItem {
+	height: 200px;
+	width: 300px;
+	background-position: 0 3em;
+	padding: 3px;
+}
+.weatherCity {
+	font-size: 2.5em;
+	color: #AB6400;
+	text-shadow: 1px 1px 2px #AB6400;
+}
+.weatherTemp {
+	margin-top: .5em;
+	margin-left: 2em;
+	margin-bottom: 10px;
+	font-size: 4.5em;
+	color: #AB6400;
+	text-shadow: 1px 1px 2px #AB6400;
+}
+.weatherDesc {
+	float: left;
+	margin-right: 20px;
+	color: #544741;
+}
+.weatherRange {
+	margin-bottom: 10px;
+	margin-right: 40px;
+	color: #544741;
+	float: right;
+}
+.weatherWind {
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	color: #544741;
+}
+.weatherHumidity {
+	float:right;
+	margin-bottom: 10px;
+	margin-right: 50px;
+	color: #544741;
+}
+.weatherSunrise {
+	float: left;
+	color: #544741;
+}
+.weatherSunset {
+	float: right;
+	padding-bottom: 10px;
+	margin-right: 50px;
+	color: #544741;
+}
+.weatherForecastItem {
+	display: none;
+	height: 100px;
+	width: 300px;
+	background-position: top left;
+	margin-top: 20px;
+	border-top: 2px dotted grey;	
+}
+.weatherForecastDay {
+	font-size: 2em;
+	text-align: center;
+	color: darkgreen;
+	text-shadow: 1px 1px 2px #008000;
+}
+.weatherForecastDate {
+	visibility: hidden;
+	padding: 5px;
+}
+.weatherForecastText {
+	text-align: center;
+}
+.weatherForecastRange {
+	text-align: center;
+	padding: 5px;
+}
+/* Front Page Slideshow */
+
+/* Landing Section */
+.landing { 
+	/* position: absolute;
+	background-position: relative; */
+}
+.home section.landing {
+	background: #D7B99D;
+	max-width: 100%;
+	display: inline-block;
+}
+.landing_logo {
+	width: 100%;
+	display: block;
+	position: absolute;
+	z-index: 20;
+	text-align: center;
+	top: -400px;
+	left: 0;
+}
+.home .landing_logo p {
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+}
+.front-image {
+	background: url("http://localhost/wordpress/wp-content/uploads/2014/08/home-summer.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+}
+.fp-dpcc-logo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	height: auto;
+	padding: 10%;
+	background-image: url("http://localhost/wordpress/wp-content/uploads/2014/09/logo_1_.png");
+	background-repeat: no-repeat;
+	z-index: 11;
+}
+
+
+.sub-menu li {
+	margin-bottom: 10px;
+	list-style: none;
+}
+
+.sub-menu li:last-child {
+	margin-bottom: 0;
+}
+
+.sub-menu a  {
+	color: #999;
+	text-decoration: none;
+}
+
+.sub-menu a:hover  {
+	color: #fff;	
+}	
+
+.current-menu-parent .current-menu-item a {
+	color: #fff;
+	font-weight: bold;
+}
+
+.widget {
+	margin: 0;
+}
+
+article.post {
+	margin: 20px 0 40px 0;
+}
+.featured-image img {
+	margin-top:118px;
+}
+.featured-image img,
+.portfolio-piece img,
+.portfolio-image img {
+	max-width: 100%;
+	height: auto;
+}
+.prev-next {
+	font-size: 24px;
+	margin-top: 30px;
+	text-align: right;
+}
+.home .sd-content {
+	padding-top: 10px;
+	display: none	
+}
+/* Landing Page Mission Statement */
+.mission-cont{
+	margin-top: -1002px;
+	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	width: 100%;
+}
+.home section.mission {
+	height: auto;
+	position: relative;
+	z-index: 300;
+	box-shadow: inset 5px 5px 50px #111;
+}
+.home .mission h3 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 28px;
+	color: #D9FFFF;
+	font-weight: 200;
+	text-align: center;
+	margin: 0 auto;
+	padding: 30px;
+	width: 50%;
+}
+.valign-fix-container {
+      display:table;
+      height:auto;
+      width: 100%;
+	  margin-top: 20%;
+}
+    
+/* Landing Page About Section */
+section#about {
+	position: relative;
+	z-index: 30;
+	background-color: white;
+}
+
+.row.news-feed-hotfix {
+	background: #fff;
+}
+.about-section h2{
+	font-size: 4.4rem;
+	font-weight: 900;
+	text-align: center;
+}
+#fp-news-caption { 
+	background-color: rgba(0, 0, 0, .4);
+	border-radius: 0 0 25px;
+	width: 60%;
+	position: absolute;
+	bottom: 19px;
+	left: 76.4%;
+}
+.news-feed a img{
+	border-radius: 25px;
+	margin: 20px 0 20px 100px;
+}
+.fp-news-caption p {
+	color:#D9FFFF;
+	width: 250px;
+	padding: 15px;	
+}
+.fp-news-caption p a {
+	color:#D9FFFF;
+}
+.news-feed-more {
+	color: #D9FFFF;
+}
+.textwidget p a {
+	color: #875226;
+}
+.widget h3 {
+	color: #875226;
+}
+/* Landing Page Event Section */
+.home .widget h3 {
+	color: #3C190A;
+	font-size: 72px;
+	margin: 0 0 0 50px;
+	padding-top: 40px;
+}
+.home .events-header img {
+	max-width: 100%;
+}
+
+/* Landing Page Events Section */
+/* section#events {
+	position: relative;
+	background: #fff;
+	margin-top: -1.1%;
+} */
+
+.home .sidebar {
+	margin: 0px;
+}
+
+/* Landing Page Contact Section */
+.home section.contact {
+	margin-top: -30px;
+	padding-bottom: 30px;
+	border-top: 50px solid #333;
+	position: relative;
+	z-index: 300;
+	background: #fff;
+}
+section.contact h2{
+	font-size: 72px;
+	color: #3C190A;
+	position: relative;
+	line-height: 50px;
+}
+section.contact p {
+	color: #3C190A;
+	font-size: 18px;
+}
+/*********Location*********/
+#gmap {
+	width: 85%;
+	height: 300px;
+	z-index: 800;
+	margin: 0px auto 50px;
+	bottom: 0;
+}
+.my-gmap-area{
+	background-size: cover;
+}
+
+/* Footer Section*/
+footer {
+	background-size: cover;
+	position: relative;
+	z-index: 100;
+	margin-top: -150px;
+}
+.footer-nav {
+	background: rgba(188,138,89,0.8);
+	position: relative;
+}
+.social-nav img {
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.footer-nav-position {
+	position: relative;
+	margin-top: 150px;
+}
+.custom-footer-nav {
+	text-align:center;
+}
+.custom-footer-nav li {
+	display:inline;
+	background: none;
+	padding:0 30px; /* variable width */
+}
+.custom-footer-nav a {
+	text-decoration:none; 
+	
+	color: #fff;
+	margin:0;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: 400;
+}
+.social-nav a img {
+	padding-left: 15px;
+}
+
+.custom-footer-nav .current-menu-item a {
+	background: none;
+	padding: 3px 0;
+	border-bottom: 2px solid #D8BA9E;
+}
+div.footer-nav-container {
+	margin: 30px 0 20px 0;
+}
+
+div.footer-nav-container p{
+	color: #D9FFFF;
+	margin:0 auto;
+	text-align:center;
+	margin-top: .7em;
+}
+div.footer-nav-container p span{
+	padding:0 10px;
+}
+div.row.footer-bg {
+	background: #29372A;
+}
+/*******************************************/
+/***************** Chamber Page **********/
+/*******************************************/
+.chamber-header img{ position: fixed; top:0px; width:100%; z-index: 1;}
+#chamber-mission{margin-top:-135px;}
+.chamber-mission h3{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3.1rem;
+	color: #D9FFFF;
+	font-weight: 200;
+	text-align: center;
+	padding: 25px 0 10px 0;
+	width: 95%;
+	margin: 0 auto;
+}
+.chamber-mission p{ 
+	font-family: 'Quicksand', sans-serif;
+	color: #D9FFFF;
+	text-align: center;
+	width:80%;
+	padding: 5px 0 25px 0;
+	margin:0 auto;
+ }
+ 
+.chamber-about h2{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3.4em;
+	font-weight: 900;
+}
+.chamber-about h3 p{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 2.1rem;
+	font-weight: 900;
+}
+.chamber-about-txt{
+	padding-left: 15px;
+}
+.chamber-quote p{
+	font-weight: bold;
+	font-size: 1.7em;
+	font-style: italic;
+	line-height: 1.2em;
+}
+.chamber-quote p span{
+	font-weight: 100;
+}
+section#chamber-contact{ position: relative; z-index: 10;}
+.dpcc-contact {
+	background-color: #00F;
+	color: rgb(217, 255, 255);
+	font-size: 1.5em;
+	height: 340px;
+	z-index: 10;
+	width: 100%;
+	background: url('http://localhost/wordpress/wp-content/uploads/2014/09/antlers.png') 50% 100%  no-repeat, url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	text-align: center;
+}
+.contact-cat{
+	color: rgb(217, 255, 255);
+}
+.contact-title{
+	color: rgb(217, 255, 255);
+	font-size: 2.25em;
+}
+.contact-pers-title p{
+	color: rgb(217, 255, 255);
+	font-size: 1em;
+	margin-top:20px;
+}
+.contact-pers-title p span{
+	font-weight: 900;
+}
+.contact-email{
+	color:rgb(171, 100, 0);
+}
+.dpcc-contact-sponsor {
+	background-color: #00D6E7;
+	height: 225px;
+	z-index: 10;
+	width: 100%;
+	background: url('http://localhost/wordpress/wp-content/uploads/2014/09/lt-blue-bg.png');
+	margin-top: 0;
+	margin-bottom: 22%;
+	text-align: center;
+}
+.slides.contact-sponsor{
+	padding: 30px;
+	margin-top: -10px;
+}
+.chamber-sponsor-txt{
+	font-family: 'Quicksand', sans-serif;
+	margin: 10px auto;
+	width: 70%;
+	color: rgb(217, 255, 255);
+	font-size: 3.25em;
+}
+.chamber-sponsor-image {
+	vertical-align: bottom;
+	right: 5%;
+	position: absolute;
+	margin-top: -.9%;
+}
+.chamber-sponsor-image span{
+	color: rgb(217, 255, 255);
+}
+
+section#membership{ 
+	position: relative; 
+	z-index: 10; 
+	margin-top: -22%;
+}
+.membership-dpcc{  
+	background-color: #FFF;
+	height: 460px;
+}
+.membership-dpcc p{  
+	padding: 2px;
+}
+.membership-dpcc h4 {  
+	background-color:white;
+	font-size: 3.4em;
+	margin-left: 90px;
+	font-weight: 900;
+}
+.membership-dpcc span {  
+	background-color:white;
+	font-size: 1.1em;
+	font-weight: 900;
+	margin-left: -14px;
+}
+.membership-btns{ 
+	font-family: 'Quicksand', sans-serif;
+	height: 460px;
+	background-color: #C8DAC0;
+	text-align:center;
+}
+.new-member-btn{
+	width: 300px;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 80px;
+	font-size: 1.4em;
+	padding: 10px;
+	font-weight: 900;
+	background-color: #40FEFE;
+	box-shadow: 3px 3px 5px #000;
+	border-radius: 10px;
+}
+.renew-dues-btn{
+	width: 300px;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 20px;
+	font-size: 1.4em;
+	padding: 10px;
+	font-weight: 900;
+	background-color: #40FEFE;
+	box-shadow: 3px 3px 5px #000;
+	border-radius: 10px;
+}
+.valign-fix-container-chamber {
+      display:table;
+      height:auto;
+      width: 100%;
+	  margin-top: 47.9%;
+}
+/*******************************************/
+/***************** Directory Page **********/
+/*******************************************/
+.deerpark-gallery-2 {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: fixed;
+	top: 0;
+
+}
+#mem-dir-title-search{
+	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	position: relative;
+	margin-top: 778px;
+	z-index: 10;
+}
+.valign-fix-container-mem-dir {
+	margin-top: -35px;
+}
+.directory-search{
+	float: right;
+	margin-top: -40px;
+	margin-bottom: 40px;
+	margin-right: -150px;
+}
+.sidebar {
+	margin-top: 40px;
+	color: #444;
+}
+
+.sidebar h3 {
+	color: #888888;
+}
+#mem-dir-body{
+	z-index: 10;
+	background-color:white;
+}
+.bg-fill{
+	width: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+.directory-sidebar{
+	float:right;
+	background-color: #F00;
+	height: 1450px;
+
+}
+.feat-business{
+
+	background-color: #008000;
+	height: 500px;
+
+}
+.all-business{
+
+	background-color: #00F;
+	height: 800px;
+
+}
+
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+	font-family: 'flexslider-icon';
+	src:url('fonts/flexslider-icon.eot');
+	src:url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/flexslider-icon.woff') format('woff'),
+		url('fonts/flexslider-icon.ttf') format('truetype'),
+		url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider { margin: 0; background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 4px; -moz-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; }
+.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.loading .flex-viewport { max-height: 300px; }
+.flexslider .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+/* Direction Nav */
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  { text-decoration:none; display: block; width: 38px; height: 80px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8); text-shadow: 1px 1px 0 rgba(255,255,255,0.3); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.flex-direction-nav .flex-prev { left: -50px; }
+.flex-direction-nav .flex-next { right: -50px; text-align: right; }
+.flexslider:hover .flex-prev { opacity: 0.7; left: 10px; color: #D9FFFF;}
+.flexslider:hover .flex-next { opacity: 0.7; right: 10px; color: #D9FFFF; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
+.flex-direction-nav a.flex-next:before  { content: '\f002'; }
+
+/* Pause/Play */
+.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
+.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
+.flex-pauseplay a:hover  { opacity: 1; }
+.flex-pauseplay a.flex-play:before { content: '\f003'; }
+
+/* Control Nav */
+.flex-control-nav { display:none; width: 100%; position: absolute; bottom: -40px; text-align: center;}
+.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.5); cursor: pointer; text-indent: -9999px; -webkit-border-radius: 20px; -moz-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -moz-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); -o-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); box-shadow: inset 0 0 3px rgba(0,0,0,0.3); }
+.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }
+.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }
+
+.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
+.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
+.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
+.flex-control-thumbs img:hover {opacity: 1;}
+.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
+
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}
+/* News Page */
+div#custom-news-slideshow {
+	margin-top: 118px;
+}
+a.right.carousel-control {
+	display: none;
+}
+a.left.carousel-control {
+	display: none;
+}
+
+.slideshow-caption {
+	right: 20%;
+	left: 20%;
+	padding-bottom: 30px;
+}
+div.news-page-heading h1 {
+	position: absolute;
+	z-index: 20;
+	left: 60%;
+	right: 30%;
+	top: -1000px;
+	color: #fff;
+	text-align: left;
+	font-size: 48px;
+	margin: 0;
+}
+.slideshow-caption {
+	position: absolute;
+	right: 30%;
+	bottom: 40px;
+	left: 60.4%;
+	z-index: 10;
+	color: #BDCCD4;
+	text-align: left;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+	font-size: 21px;
+	padding: 0;
+	width: 320px;
+}
+.slideshow-caption h3 {
+	margin:0;
+	color: #BDCCD4;
+}
+.slideshow-caption a {
+	color: #BDCCD4;
+}
+.slideshow-caption a:hover {
+	text-decoration: none;
+	color: #A8B4BA;
+}
+.slideshow-caption p {
+	line-height: 20px;
+}
+.slideshow-caption p a.news-feed-more {
+	color: #BDCCD4;
+	display: none;
+}
+
+ol.carousel-indicators {
+	display: none;
+}
+
+.news-featured-image img {
+	max-width: 100%;
+	height: auto;
+}
+.news-content {
+	margin-top: 30px;
+}
+.news-content-wrapper {
+	position: relative;
+}
+.news-bg{
+	padding: 0;
+	width: 33.33%;
+	position: absolute;
+}
+.news-container {
+	background: rgba(188,138,89,0.6);
+	border: 5px solid #fff;
+	padding: 10px 10px;
+}
+.news-bg h2 a {
+	color: #3C190A;
+	font-size: 41px;
+}
+.slideshow-caption a.news-feed-more {
+	display: none;
+}
+.news-container a.news-feed-more {
+	display: none;
+}
+
+.news-container a:hover {
+	text-decoration: none;
+	color: #492014;
+}
+
+.news-container h2 {
+	margin: 5px 0 0 0;
+}
+.news-container p {
+	font-size: 14px;
+	margin: 0;
+}
+span.news-comment-count {
+	margin-top: 10px;
+	color: #3C190A;
+}
+label.screen-reader-text {
+	display: none;
+}
+.widget_search .screen-reader-text {
+    display:none;
+}
+
+.WGA-custom-search-form input#s {
+	height: 50px;
+	width: 100%;
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+	border-radius: 5px;
+	background: #ccc;
+}
+.WGA-custom-search-form input[type="image"] {
+	float: right;
+	position: relative;
+	margin-top: -40px;
+	margin-right: 15px;
+}
+.WGA-custom-search-form input[type="image"]:focus {
+	outline: none;
+}
+.WGA-custom-search-form input#s:focus {
+	outline: none;
+}
+.social-reveal {
+	font-weight: 700;
+	padding-bottom: 10px;
+	cursor: pointer;
+	display:inline-block;
+}
+.news-container .sd-content {
+	display: none;
+}
+.sd-social-icon .sd-content ul li[class*='share-'] a.sd-button {
+	margin: 0;
+}
+/*******************************************/
+/***************** calendar Page **********/
+/*******************************************/
+.calendar-title {
+	margin-top:130px;
+	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+}
+.calendar-title h3{
+	font-size: 3.4em;
+	color: powderblue;
+	padding: 30px 50px;
+}
+.calendar-body{
+	padding-bottom:50px;
+}
+.calendar-cta{
+	background: url('http://localhost/wordpress/wp-content/uploads/2014/09/antlers.png') 42% 100%  no-repeat, url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	height:300px;
+	width:100%;
+}
+.cal-cta-txt h2{
+	color: #B0E0E6;
+	font-size: 2.8em;
+	text-align: center;
+	width: 40%;
+	margin: 45px auto 10px;
+}
+.cal-cta-btn {
+	text-align: center;
+	
+}
+.cal-reg-btn {
+	background-color:#FDEAB5;
+	border-radius:10px;
+	box-shadow:3px 3px 10px black;
+	color:#AB6400;
+	font-size:2em;
+	font-weight:900;
+	margin: 10px auto 20px;
+	padding: 0 40px;
+}
+
+/* Other Pages */
+.main-content .sd-content {
+	display: none;
+}
+.page-header {
+	margin: 0
+}
+.mt5 {
+	margin-top: 5px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mt20 {
+	margin-top: 20px;
+}
+.mb5 {
+	margin-bottom: 5px;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.bg {
+	background: #D8BA9E;
+}
+.bg-fix {
+	background: #D8BA9E;
+}
+.reverse h3 {
+	color: #875226;
+	font-size: 21px;
+}
+.main-content h2 {
+	font-size: 72px;
+	color: #3C190A;
+	margin-top: 10px;
+	line-height: 50px;
+	margin-top: 15px;
+}
+ul.wca-list {
+	padding-left: 25px;
+}
+.wca-list {
+	list-style-type: none;
+}
+.wca-list li {
+	line-height: 30px;
+
+}
+button.wca-btn {
+	font-size: 48px;
+	padding: 10px 20px;
+	background: #875226;
+	border: 3px solid #83312E;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 400;
+	color: #fff;
+}
+
+.wca-quote {
+	padding: 10px 30px 10px 70px;
+	width: 100%;
+	background: #fff;
+}
+.wca-quote h4 {
+	font-size: 31px;
+}
+.sudo-row {
+	margin-left:-4%;
+	margin-right:-5%;
+}
+.wga-full-background {
+	padding: 50px;
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+}
+.wga-full-background h1, .wga-full-background h2, .wga-full-background h3, .wga-full-background h4, .wga-full-background h5, .wga-full-background h6, .wga-full-background p {
+	font-size: inherit;
+	color: #fff;
+}
+
+.discounts {
+	padding-bottom: 50px;
+}
+.links-caption {
+	font-size: 31px;
+	font-style: italic;
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+.wca-btn a {
+	color: #fff;
+}
+.wca-btn a:hover {
+	color: #ccc;
+}
+.btn-primary:focus {
+	color: #ccc;
+	background-color: #875226;
+	border-color: #83312E;
+}
+div#ai1ec-container {
+  margin: 30px;
+}
+.page-id-101 .sd-content {
+	display: none;
+}
+
+.btn-primary {
+	background: #875226;
+	color: #cccccc;
+	border: 3px solid #83312E;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+	background: #814620;
+	color: #dfdfdf;
+	border: 3px solid #83312E;
+}
+/****************************************************************************
+							result Page
+************************************************************************/
+.valign-fix-container-result{
+	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	margin-top: 130px;
+}
+/****************************************************************************
+							Search Page
+************************************************************************/
+.search {
+	min-height: 600px;	
+}
+
+
+
+/****************************************************************************
+							IE8 Fixes
+************************************************************************/
+
+.navbar-inverse .nav li.dropdown.open>.dropdown-toggle, .navbar-inverse .nav
+li.dropdown.active>.dropdown-toggle, .navbar-inverse .nav    
+li.dropdown.open.active>.dropdown-toggle,
+.navbar, .navbar-inverse .navbar-inner {
+    filter:none;
+}
+/*******************************************************************************
+							  Gallery
+***************************************************************************/
+#events-heading {
+	position:relative;
+	z-index: 400;
+	box-shadow: inset 5px 5px 50px #111;
+	overflow: hidden;
+	max-width: 100%;
+	background: #AB6400;
+}
+#events-heading h2 {
+	font-size: 40px;
+	color: #D9FFFF;
+	text-align: center;
+	padding-top: 1%;
+	position: relative;
+	margin-left: -49%;
+}
+#events-heading h2 span{
+	font-weight: 600;
+	font-size: 54px;
+}
+.<div class="deerpark-gallery">
+				<h2 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0); visibility: visible;"><span>Fall</span> things to do in Deer Park</h2><div class="row"><div class="col-xs-6 image-gallery-col-1">As the air gets crisp and the pumpkins start to grow, there are lots of fall activities to do in our town. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas malesuada magna et justo semper, ac rutrum est ullamcorper. Integer vitae sollicitudin tortor, at ornare enim. In eget felis et turpis dapibus molestie eget sed enim. Aliquam interdum nulla eu sapien mollis tincidunt. </div><div class="col-xs-6 image-gallery-col-2">Curabitur luctus consectetur justo faucibus auctor. Ut non neque vulputate mauris pulvinar vestibulum. Suspendisse accumsan ultricies vulputate. Phasellus cursus massa eu lacus auctor, sed luctus ipsum aliquet. Sed pulvinar elementum pellentesque. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris nulla odio, ornare ac eleifend at, consequat a neque. </div></div>
+
+<div class="tiled-gallery type-square" data-original-width="500"><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=52"><img data-original-width="162" data-original-height="162" data-attachment-id="52" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_012.jpg" data-orig-size="318,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_01" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_012-300x289.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_012.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_012.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_01" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=53"><img data-original-width="162" data-original-height="162" data-attachment-id="53" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_022.jpg" data-orig-size="322,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_02" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_022-300x286.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_022.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_022.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_02" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=54"><img data-original-width="162" data-original-height="162" data-attachment-id="54" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_031.jpg" data-orig-size="321,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_03" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_031-300x286.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_031.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_031.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_03" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=55"><img data-original-width="162" data-original-height="162" data-attachment-id="55" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_042.jpg" data-orig-size="317,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_04" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_042-300x290.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_042.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_042.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_04" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=56"><img data-original-width="162" data-original-height="162" data-attachment-id="56" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_052.jpg" data-orig-size="319,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_05" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_052-300x288.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_052.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_052.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_05" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=57"><img data-original-width="162" data-original-height="162" data-attachment-id="57" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_062.jpg" data-orig-size="318,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_06" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_062-297x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_062.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_062.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_06" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=58"><img data-original-width="162" data-original-height="162" data-attachment-id="58" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_072.jpg" data-orig-size="322,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_07" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_072-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_072.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_072.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_07" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=59"><img data-original-width="162" data-original-height="162" data-attachment-id="59" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_082.jpg" data-orig-size="321,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_08" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_082-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_082.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_082.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_08" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=60"><img data-original-width="162" data-original-height="162" data-attachment-id="60" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_092.jpg" data-orig-size="317,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_09" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_092-296x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_092.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_092.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_09" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=61"><img data-original-width="162" data-original-height="162" data-attachment-id="61" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_102.jpg" data-orig-size="319,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_10" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_102-298x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_102.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_102.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_10" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=62"><img data-original-width="162" data-original-height="162" data-attachment-id="62" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_112.jpg" data-orig-size="318,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_11" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_112-300x298.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_112.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_112.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_11" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=63"><img data-original-width="162" data-original-height="162" data-attachment-id="63" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_122.jpg" data-orig-size="322,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_12" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_122-300x294.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_122.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_122.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_12" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=64"><img data-original-width="162" data-original-height="162" data-attachment-id="64" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_132.jpg" data-orig-size="321,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_13" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_132-300x295.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_132.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_132.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_13" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=65"><img data-original-width="162" data-original-height="162" data-attachment-id="65" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_142.jpg" data-orig-size="317,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_14" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_142-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_142.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_142.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_14" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=66"><img data-original-width="162" data-original-height="162" data-attachment-id="66" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_152.jpg" data-orig-size="319,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_15" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_152-300x297.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_152.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_152.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_15" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=87"><img data-original-width="162" data-original-height="162" data-attachment-id="87" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_013.jpg" data-orig-size="318,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_01" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_013-300x289.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_013.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_013.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_01" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=88"><img data-original-width="162" data-original-height="162" data-attachment-id="88" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_023.jpg" data-orig-size="322,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_02" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_023-300x286.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_023.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_023.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_02" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=89"><img data-original-width="162" data-original-height="162" data-attachment-id="89" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_032.jpg" data-orig-size="321,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_03" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_032-300x286.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_032.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_032.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_03" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=90"><img data-original-width="162" data-original-height="162" data-attachment-id="90" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_043.jpg" data-orig-size="317,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_04" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_043-300x290.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_043.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_043.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_04" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=91"><img data-original-width="162" data-original-height="162" data-attachment-id="91" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_053.jpg" data-orig-size="319,307" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_05" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_053-300x288.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_053.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_053.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_05" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=92"><img data-original-width="162" data-original-height="162" data-attachment-id="92" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_063.jpg" data-orig-size="318,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_06" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_063-297x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_063.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_063.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_06" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=93"><img data-original-width="162" data-original-height="162" data-attachment-id="93" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_073.jpg" data-orig-size="322,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_07" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_073-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_073.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_073.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_07" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=94"><img data-original-width="162" data-original-height="162" data-attachment-id="94" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_083.jpg" data-orig-size="321,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_08" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_083-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_083.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_083.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_08" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=95"><img data-original-width="162" data-original-height="162" data-attachment-id="95" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_093.jpg" data-orig-size="317,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_09" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_093-296x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_093.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_093.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_09" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=96"><img data-original-width="162" data-original-height="162" data-attachment-id="96" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_103.jpg" data-orig-size="319,321" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_10" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_103-298x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_103.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_103.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_10" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=97"><img data-original-width="162" data-original-height="162" data-attachment-id="97" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_113.jpg" data-orig-size="318,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_11" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_113-300x298.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_113.jpg" src="http://i2.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_113.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_11" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=98"><img data-original-width="162" data-original-height="162" data-attachment-id="98" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_123.jpg" data-orig-size="322,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_12" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_123-300x294.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_123.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_123.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_12" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=99"><img data-original-width="162" data-original-height="162" data-attachment-id="99" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_133.jpg" data-orig-size="321,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_13" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_133-300x295.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_133.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_133.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_13" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=100"><img data-original-width="162" data-original-height="162" data-attachment-id="100" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_143.jpg" data-orig-size="317,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_14" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_143-300x300.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_143.jpg" src="http://i1.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_143.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_14" data-recalc-dims="1"></a></div><div class="tiled-gallery-item"><a border="0" href="http://54.213.203.222/deerpark/?attachment_id=101"><img data-original-width="162" data-original-height="162" data-attachment-id="101" data-orig-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_153.jpg" data-orig-size="319,316" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="photo_boxes_15" data-image-description="" data-medium-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_153-300x297.jpg" data-large-file="http://54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_153.jpg" src="http://i0.wp.com/54.213.203.222/deerpark/wp-content/uploads/2014/08/photo_boxes_153.jpg?resize=162%2C162" style="margin: 2px; width: 162px; height: 162px;" title="photo_boxes_15" data-recalc-dims="1"></a></div></div>	</div>
+.image-gallery-col-1 {
+	width:45%;
+	margin-left: 7%;
+}
+.image-gallery-col-1 {
+	width: 40%;
+	float: left;
+	font-size: 18px;
+	margin-bottom: 3%;
+	margin-left: 9%;
+	color: #D9FFFF;
+}
+.image-gallery-col-2 {
+	width: 40%;
+	float: right;
+	margin-bottom: 3%;
+	font-size: 18px;
+	margin-right: 7%;
+	color: #D9FFFF;
+}
+.deerpark-gallery .tiled-gallery {
+	margin-left:10%;
+}
+.tiled-gallery .tiled-gallery-item {
+	margin-right: -5px;
+}
+.fi-posts{
+margin-top: 46px;
+margin-left: 50px;
+margin-right: auto;
+bottom: 40px;
+}
+.posts {
+	float: right;
+	position: absolute;
+	top: 150px;
+}
+
+/*******************************************************************************
+							  Media Queries 
+***************************************************************************/
+@media (max-width:1366px){
+	.navbar-collapse ul{
+		margin-right: -16.9%;
+	}
+	.fp-dpcc-logo{
+		right: 0;
+		bottom: 0;
+		width: 300px;
+		height: 325px;
+	}
+	.valign-fix-container{
+		margin-top: 7%;
+	}
+	.news-feed a img {
+		margin: 20px 0 20px 10px;
+	}
+	#fp-news-caption {
+		left: 64.4%;
+	}
+}
+@media (max-width:1280px){
+/* 	.valign-fix-container {
+			margin-top: 55%;
+	} */
+	img.fp-dpcc-logo {
+		right: 20%;
+		bottom: 27%;
+	}
+	#custom-slideshow img {
+		left: 0%;
+	}
+	.navbar-collapse ul {
+		float: right;
+		margin-right: -18.6%;
+	}
+	#events-heading h2 {
+		font-size: 40px;
+		color: #D9FFFF;
+		text-align: center;
+		padding-top: 1%;
+		position: relative;
+		margin-left: -32%;
+	}
+	p.news-feed-post-title a {
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		font-weight: 600;
+		left: 14%;
+		font-size: 1.5em;
+		width: 81%;
+		padding: 20px 20px 0 20px;
+		color: #D9FFFF;
+		bottom: 44.6%;
+	}
+	p.news-feed-exp {
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		bottom: 22px;
+		left: 14%;
+		width: 81%;
+		padding: 0 20px 20px 20px;
+		color: #D9FFFF;
+	}
+	.wrapper {
+		margin-bottom: -42%;
+	}
+@media (min-width:1170px){
+	.nav>li>a {
+		padding-left: 20px;
+		padding-right: 20px;	
+	}
+}
+
+@media (max-width: 992px) {
+	.news-bg{
+ 		width: 50%;
+ 	}
+	div[id^="attachment_"] p.wp-caption-text {
+		position: absolute;
+		display: block;
+		height: auto;
+		margin: 0;
+		padding: 10px;
+		background: rgba(0,0,0,0.6);
+		top: 70%;
+		bottom: 0;
+	}
+	.navbar-collapse ul {
+		filter:none;
+		margin:0;
+	}
+	.navbar-nav>li {
+		filter:none;
+		width: 90%;
+		margin: 0 auto;
+		padding: 10px;
+	}
+	.navbar-nav>hr {
+		filter:none;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.navbar-nav>li>a {
+		filter:none;
+		padding: 10px;
+		margin: 0;
+		text-align:center;
+	}
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse{
+		max-height: 340px !important;
+	}
+	.admin-bar .navbar-fixed-top {
+		min-height: 120px;
+	}
+	.navbar-header {
+        float: none;
+		width: 100%
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+		overflow-y: hidden;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+    .secondary-nav-toggle {
+	    display: none;
+    }
+	ul.nav {
+		/*background: rgba(0,0,0,0.4);*/
+	}
+	.home img.alignnone.size-full{
+		width: 300px;
+		height: auto;
+	}
+	.home .mission h3 {
+		font-size: 34px;
+		line-height: 34px;
+		padding: 30px;
+	}
+	section.about h2 {
+		font-size: 50px;
+		line-height: 40px;
+	}
+	section.about p {
+		font-size:14px;
+		line-height: 24px;
+	}
+	#events-heading h2 {
+		font-size: 50px;
+		line-height: 40px;
+	}
+	.home .widget h3 { 
+		font-size: 50px;
+		line-height: 40px;
+	}
+	section.contact h2 {
+		font-size: 50px;
+		line-height: 40px;
+	}
+	section.contact p {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+@media (min-width:960px){
+	.nav>li>a {
+		padding-left: 15px;
+		padding-right: 15px;	
+	}
+	
+}
+@media (min-width:768px) {
+	.sub-menu {
+		display: none;
+		position: absolute;
+		background: #222;
+		padding: 10px 15px;
+		width: 200px;		
+	}
+
+	li:hover .sub-menu {
+		display: block;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.navbar-collapse ul {
+		width: 100%;
+	}
+	.secondary-nav-toggle {
+		display: none;
+	}
+	ul.sub-menu {
+		position: relative;
+		z-index: 100;
+		display: block;
+	}
+	ul.sub-menu li {
+		display: block;
+		margin: 0;
+
+	}
+	ul.sub-menu li a{
+		display: block;
+		padding: 10px 0 10px 0;
+	}
+
+	/* News Page Fix News Items 100% */
+ 	.news-bg{
+ 		width: 100%;
+ 	}
+	.landing_logo img {
+		max-width: 40%;
+		height: auto;
+	}
+}
+@media screen and (max-width: 750px) {
+	.news-feed-background {
+		width: 100%;
+		height:100%;
+	}
+	.news-feed {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.about-section{
+		width: 100%;
+		margin-left: 0%;
+	}
+	.contact-section {
+		width: 100%;
+		margin: 0;
+	}
+	div#ai1ec-container {
+	  margin: 10px;
+	  margin-bottom: 30px;
+	}
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+		width: 100%;
+		margin: 0;
+	}
+	.page-headline h1{
+		text-align:center;
+	}
+	.navbar-inverse .navbar-toggle {
+		visibility: visable;
+	}
+}
+@media (max-width:540px) {
+	.wrapper {
+		left:0;
+	}
+	.valign-fix-container {
+		margin-top: 40%;
+	}
+	.home .mission h3 {
+	font-size: 34px;
+	line-height: 34px;
+	padding: 50px;
+	text-align: center;
+	margin: 0;
+	width: 300PX;
+	}
+	.deerpark-gallery .tiled-gallery {
+			margin:0;
+	}
+	.news-feed a img{
+		margin:0;
+	}
+	.portfolio-piece h4 {
+		font-size: .8em;
+	}
+	.prev-next {
+		margin-top: 15px;
+		font-size: 18px;
+	}
+	.page-headline {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	.navbar-inverse .navbar-toggle {
+		visibility: visable;
+	}
+	.navbar-inverse .navbar-nav>li:nth-child(1) {
+		background : rgba(0, 215, 232, 1);
+	}
+	.navbar-inverse .navbar-nav>li:nth-child(2) {
+		background : rgba(0, 215, 232, 1);
+	}
+	.navbar-inverse .navbar-nav>li:nth-child(3) {
+		background : rgba(0, 215, 232, 1);
+	}
+	.navbar-inverse .navbar-nav>li:nth-child(4) {
+		background : rgba(0, 215, 232, 1);
+	}
+	.navbar-inverse .navbar-nav>li:nth-child(5) {
+		background : rgba(0, 215, 232, 1);
+		padding: 0;
+	}
+	.fp-dpcc-logo {
+		display:none;
+	}
+	#events-heading h2{
+		font-size: 1.5em;
+		text-align: center;
+		margin-left: 5px;
+		font-weight: 900;
+	}
+	.news-feed a img{
+		width: 95%;
+		height:95%;
+	}
+	#fp-news-caption{
+		left: 35%;
+		bottom: 0;
+	}
+	.fp-news-caption p{
+		width: 200px;
+	}
+	.chamber-header img{
+		margin-top:130px;
+	}
+	.valign-fix-container-chamber{
+		margin-top: 390px;
+	}
+	.chamber-logo img {
+		width:100%;
+		height:100%;
+		text-align:center;
+	}
+	.dpcc-contact{
+		height: 500px;
+	}
+	.dpcc-contact-sponsor{
+		height: 650px;
+	}
+	.membership-dpcc h4{
+		width:100%;
+		text-align:center;
+		margin:0 auto;
+	}
+	.membership-dpcc span {
+		line-height:2em;
+	}
+	.chamber-membership{
+		/*height:1000px;*/
+	}
+	.membership-dpcc {
+		height:1000px;
+	}
+	.membership-btns {
+		height: 200px;
+	}
+	.new-member-btn{
+		margin-top: 30px;
+		width:200px;
+		font-size: 1em;
+	}
+	.renew-dues-btn{
+		width:200px;
+		font-size: 1em;
+	}
+}
