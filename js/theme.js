@@ -7,20 +7,20 @@ var $ = jQuery;
 /************************************************************************
 				Mission Animation Viewport Trigger Function 
 ***************************************************************************/
-var mission_viewport_count = 0;
-var mission_doc_position = '';
-var mission_doc_count = 0;
-var mission_animation_trigger = 0;
+// var mission_viewport_count = 0;
+// var mission_doc_position = '';
+// var mission_doc_count = 0;
+// var mission_animation_trigger = 0;
 
 
-function missionViewportTrigger() {
+// function missionViewportTrigger() {
 
-	if (mission_viewport_count < 1) {
-		mission_viewport_count++;
-		mission_doc_position = $(document).scrollTop();
-		mission_doc_count++;
-	}
-}
+// 	if (mission_viewport_count < 1) {
+// 		mission_viewport_count++;
+// 		mission_doc_position = $(document).scrollTop();
+// 		mission_doc_count++;
+// 	}
+// }
 
 
 /************************************************************************

@@ -1,11 +1,11 @@
 <?php $options = get_option('plugin_options'); ?>
 <?php
   /*
-    Template Name: Front Page Template
+    Template Name: News Page Template
   */
 ?>
 <?php get_header(); ?>
-<!-- page-front-page.php -->
+<!-- page-news.php -->
     <!-- Landing Section Section -->
     <section class="landing" id="home">
 		
@@ -59,13 +59,13 @@
 				wp_reset_postdata(); ?>
 			</div>
 			<div class="col-xs-4 news-feed-background">
-				<article class="news-feed">
+				<div class="col-xs-4 news-feed">
 				  <?php
 				  	$args = array( 'posts_per_page' => 1 );
 					$lastposts = get_posts( $args );
 					foreach ( $lastposts as $post ) :
 					  setup_postdata( $post ); ?>
-					  <div id="fp-news-caption" class="fp-news-caption">
+					  <div id="fp-news-caption" class="col-xs-4 fp-news-caption">
 					  <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>				  
 					  <?php echo '<p>'.excerpt(15).'</p>'; ?>
 					  </div>
@@ -80,7 +80,7 @@
 					}					  
 					endforeach; 
 					wp_reset_postdata(); ?>
-				</article>
+				</div>
 			</div>
       </div>
     </div>

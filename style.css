@@ -472,6 +472,7 @@ section#about {
 .news-feed a img{
 	border-radius: 25px;
 	margin: 20px 0 20px 100px;
+	max-width: 600px;
 }
 .fp-news-caption p {
 	color:#D9FFFF;
@@ -608,7 +609,7 @@ div.row.footer-bg {
 /*******************************************/
 /***************** Chamber Page **********/
 /*******************************************/
-.chamber-header img{ position: fixed; top:0px; width:100%; z-index: 1;}
+.chamber-header img{ position: fixed; top:0; left: 0; width:100%; z-index: 1;}
 #chamber-mission{margin-top:-135px;}
 .chamber-mission h3{
 	font-family: 'Quicksand', sans-serif;

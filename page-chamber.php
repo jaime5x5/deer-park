@@ -11,15 +11,20 @@
 <?php
 if (has_post_thumbnail()) {
 ?>
-	<div class="chamber-header">			
+<div class="container">
+	<div class="row">       
+		<div class="col-xs-12">
+			<div class="chamber-header">			
 <?php if( get_field('chamber-header-image') ): ?>
 
 	<img src="<?php the_field('chamber-header-image'); ?>" />
 
 <?php endif;?>
 <?php } ?>
-
+			</div>
+		</div>
 	</div>
+</div>
   <!-- Mission Statment Section -->
   <section id="chamber-mission" class="chamber-mission" style="background: url('<?php bloginfo( 'template_directory' ); ?>/images/mission-fill.png'); position:relative; z-index: 10;" data-type="background" data-speed="3">
         <div class="fluid-container valign-fix-container-chamber">

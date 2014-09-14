@@ -4,14 +4,14 @@
 
 <?php
 if (has_post_thumbnail()) {
-  echo '<div class="featured-image fi-posts">';
+  echo '<div class="featured-image">';
     the_post_thumbnail();
   echo '</div>';
   echo '</div>'; // End fluid-container
-  echo '<div class="container main-content posts">';
+  echo '<div class="container main-content">';
 
  if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-            echo '<div class="page-header posts">';
+            echo '<div class="page-header">';
             echo '<h1>';
             the_title(); 
             echo '</h1>';
@@ -21,11 +21,11 @@ if (has_post_thumbnail()) {
             echo '<div class="page-header">';
             echo '<h1>Oh no! Something didn\'t load from our Database!</h1>';
             echo '</div>';
+            echo '</div>';
  endif;
+ echo '</div>';
 
-
-
-} elseif (has_post_thumbnail()){
+} else {
 ?>
 <style type="text/css"> 
   .page-header h1{ margin-top: 100px; }
@@ -45,25 +45,11 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
             echo '<h1>Oh no! Something didn\'t load from our Database!</h1>';
             echo '</div>';
  endif;
+echo '</div> <!-- End main-container -->';
 
-}else {
-
-
-if ( have_posts() ) : while ( have_posts() ) : the_post(); 
-            the_content(); 
-			get_template_part('content', 'gallery');
- endwhile; else: 
-            echo '<div class="page-header">';
-            echo '<h1>Oh no! Something didn\'t load from our Database!</h1>';
-            echo '</div>';
- endif;
-
-}
-echo '</div> <!-- End fluid-container -->';
- // End else
+} // End else
 
 ?>
-
-
-
 <?php get_footer(); ?>
+
+

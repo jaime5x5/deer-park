@@ -34,7 +34,7 @@
 		<div class="fluid-container">
 			<div class="row">
 				<div class="col-xs-12 cal-cta-txt">
-					<h2><?php the_field('calendar-registration-cta'); ?><?h2>
+					<h2><?php the_field('calendar-registration-cta'); ?></h2>
 				</div>
 			</div>
 			<div class="row">
