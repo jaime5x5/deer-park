@@ -373,29 +373,29 @@ $("#news-masonry-wrapper").masonry({
 /************************************************************************
 							News Page Animation
 ***************************************************************************/
-// var slideshow_caption = $('.slideshow-caption a').offset();
-// var nav_bar_height = $('.navbar-fixed-top').outerHeight();
-// var admin_bar_height = $('#wpadminbar').outerHeight();
-// var news_headline_height = $('div.news-page-heading h1').outerHeight();
-// var slideshow_caption_pos = slideshow_caption - nav_bar_height - admin_bar_height - news_headline_height - 10;
+ var slideshow_caption = $('.slideshow-caption a').offset();
+ var nav_bar_height = $('.navbar-fixed-top').outerHeight();
+ var admin_bar_height = $('#wpadminbar').outerHeight();
+ var news_headline_height = $('div.news-page-heading h1').outerHeight();
+ var slideshow_caption_pos = slideshow_caption - nav_bar_height - admin_bar_height - news_headline_height - 10;
 
-// //console.log(slideshow_caption + ' slideshow_caption');
+ //console.log(slideshow_caption + ' slideshow_caption');
 
-	// var news_page_animation = new TimelineMax();
-	// news_page_animation.set("div.news-page-heading h1", {visibility:"visible"});
-	// news_page_animation.to("div.news-page-heading h1", 2, {top:slideshow_caption_pos, autoAlpha:1, ease:Bounce.easeOut});
+	 var news_page_animation = new TimelineMax();
+	 news_page_animation.set("div.news-page-heading h1", {visibility:"visible"});
+	 news_page_animation.to("div.news-page-heading h1", 2, {top:slideshow_caption_pos, autoAlpha:1, ease:Bounce.easeOut});
 
 /************************************************************************
 							News Page Share Reveal
 ***************************************************************************/
-	// var social_counter = 1;
-// $('.social-reveal').click(function(){
-	// var index = $(this);
-	// var social_reveal = $('.sd-content');
-	// var sibling = $(this).siblings().find(social_reveal);
-	// $(index).slideUp(50);
-	// $(sibling).delay(500).slideDown(300);	
-// });
+	 var social_counter = 1;
+ $('.social-reveal').click(function(){
+	 var index = $(this);
+	 var social_reveal = $('.sd-content');
+	 var sibling = $(this).siblings().find(social_reveal);
+	 $(index).slideUp(50);
+	 $(sibling).delay(500).slideDown(300);	
+ });
 
 /************************************************************************
 							End Ready Function

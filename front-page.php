@@ -64,6 +64,7 @@
 				  	$args = array( 'posts_per_page' => 1 );
 					$lastposts = get_posts( $args );
 					foreach ( $lastposts as $post ) :
+					//var_dump($post);
 					  setup_postdata( $post ); ?>
 					  <div id="fp-news-caption" class="fp-news-caption">
 					  <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>				  

@@ -224,11 +224,11 @@ span.dark {
 }
 .wrapper{
 	position: relative;
-	margin-top: 13%;
+	margin-top: 33%;
 	left: 10%;
 	width: 300px;
-	height: 350px;
-	background: rgba( 200, 218, 192, .9);
+	height: 225px;
+	background-color: rgba( 200, 218, 192, .9);
 	padding: 20px;
 	border: 2px inset #544741;
 	border-radius: 15px;
@@ -248,9 +248,11 @@ span.dark {
 	width: 300px;
 	background-position: 0 3em;
 	padding: 3px;
+	background-size: 150px;
+	margin-top: -20px;
 }
 .weatherCity {
-	font-size: 2.5em;
+	font-size: 1.5em;
 	color: #AB6400;
 	text-shadow: 1px 1px 2px #AB6400;
 }
@@ -258,7 +260,7 @@ span.dark {
 	margin-top: .5em;
 	margin-left: 2em;
 	margin-bottom: 10px;
-	font-size: 4.5em;
+	font-size: 2.5em;
 	color: #AB6400;
 	text-shadow: 1px 1px 2px #AB6400;
 }
@@ -348,7 +350,7 @@ span.dark {
 	line-height: 0;
 }
 .front-image {
-	background: url("http://localhost/wordpress/wp-content/uploads/2014/08/home-summer.jpg");
+	background-image: url("http://localhost/wordpress/wp-content/uploads/2014/08/home-summer.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: fixed;
@@ -359,13 +361,14 @@ span.dark {
 .fp-dpcc-logo {
 	position: fixed;
 	right: 0;
-	bottom: 0;
+	bottom: 85px;
 	max-width: 100%;
 	height: auto;
 	padding: 10%;
 	background-image: url("http://localhost/wordpress/wp-content/uploads/2014/09/logo_1_.png");
 	background-repeat: no-repeat;
 	z-index: 11;
+	background-size: 200px;
 }
 
 
@@ -400,7 +403,8 @@ article.post {
 	margin: 20px 0 40px 0;
 }
 .featured-image img {
-	margin-top:118px;
+	margin-top: 135px;
+	margin-left: 6.3%;
 }
 .featured-image img,
 .portfolio-piece img,
@@ -443,7 +447,7 @@ article.post {
       display:table;
       height:auto;
       width: 100%;
-	  margin-top: 20%;
+	  margin-top: 19%;
 }
     
 /* Landing Page About Section */
@@ -654,13 +658,13 @@ div.row.footer-bg {
 }
 section#chamber-contact{ position: relative; z-index: 10;}
 .dpcc-contact {
-	background-color: #00F;
+	background-color: #544741;
 	color: rgb(217, 255, 255);
 	font-size: 1.5em;
 	height: 340px;
 	z-index: 10;
 	width: 100%;
-	background: url('http://localhost/wordpress/wp-content/uploads/2014/09/antlers.png') 50% 100%  no-repeat, url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	/*background: url('http://localhost/wordpress/wp-content/uploads/2014/09/antlers.png') 50% 100%  no-repeat, url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');*/
 	text-align: center;
 }
 .contact-cat{
@@ -686,7 +690,7 @@ section#chamber-contact{ position: relative; z-index: 10;}
 	height: 225px;
 	z-index: 10;
 	width: 100%;
-	background: url('http://localhost/wordpress/wp-content/uploads/2014/09/lt-blue-bg.png');
+	background-image: url('http://localhost/wordpress/wp-content/uploads/2014/09/lt-blue-bg.png');
 	margin-top: 0;
 	margin-bottom: 22%;
 	text-align: center;
