@@ -57,18 +57,6 @@ function blog_sidebar_widget( $name, $id, $description ) {
 
 blog_sidebar_widget( 'Blog Sidebar', 'blog', 'Displays on the side of the blog page' );
 
-function front_page_calendar( $name, $id, $description ) {
-	register_sidebar(array(
-		'name' => __( $name ),	 
-		'id' => $id, 
-		'description' => __( $description ),
-		'before_widget' => '<div class="widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>'
-	));
-}
-front_page_calendar( 'Front Page Calendar', 'front_page', 'Displays the Calendar on the front page.' );
 
 function excerpt($limit) {
       $excerpt = explode(' ', get_the_excerpt(), $limit);
@@ -82,8 +70,6 @@ function excerpt($limit) {
       return $excerpt;
 }
 
-
-
 add_theme_support( 'menus' );
 add_theme_support( 'post-thumbnails' );
 
@@ -91,12 +77,5 @@ add_theme_support( 'post-thumbnails' );
 
 //tutorial care of http://www.sitepoint.com/wordpress-options-panel/
 //require_once(TEMPLATEPATH . '/functions/admin-menu.php');
-
-
-
-
-
-
-
 
 ?>

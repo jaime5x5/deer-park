@@ -61,8 +61,9 @@
 			<div class="col-xs-4 news-feed-background">
 				<article class="news-feed">
 				  <?php
-				  	$args = array( 'posts_per_page' => 1 );
+				  	$args = array( 'posts_per_page' => 1, 'category_name' => 'featured', );
 					$lastposts = get_posts( $args );
+					//var_dump($lastposts);
 					foreach ( $lastposts as $post ) :
 					//var_dump($post);
 					  setup_postdata( $post ); ?>
@@ -71,11 +72,11 @@
 					  <?php echo '<p>'.excerpt(15).'</p>'; ?>
 					  </div>
 					<?php
-					$thumbnails = get_posts( 'numberposts=1' );
+					$thumbnails = get_posts( $args );
 					foreach ( $thumbnails as $thumbnail ) {
 						if ( has_post_thumbnail( $thumbnail->ID ) ) {
 							echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
-							echo get_the_post_thumbnail( $thumbnail->ID, 'full' );
+							echo get_the_post_thumbnail( $thumbnail->ID, 'medium' );
 							echo '</a>';
 						}
 					}					  

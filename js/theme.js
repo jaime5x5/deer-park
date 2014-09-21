@@ -324,16 +324,56 @@ $('.page-id-103 div[id^="attachment_"] p.wp-caption-text').click(function(){
 
 
 /************************************************************************
-					Main Page News Feed Quick Fix
+					Main Page News Feed Height Fix
 ***************************************************************************/
-	  var news_height = $('.news-feed-hotfix').outerHeight() + 20;
+	  var news_height = $('.news-feed-hotfix').outerHeight() ;
 	  $('.news-feed-background').css('height',news_height);
+
+		equalheight = function(container){
+
+		var currentTallest = 0,
+		     currentRowStart = 0,
+		     rowDivs = new Array(),
+		     $el,
+		     topPosition = 0;
+		 $(container).each(function() {
+
+		   $el = $(this);
+		   $($el).height('auto')
+		   topPostion = $el.position().top;
+
+		   if (currentRowStart != topPostion) {
+		     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		       rowDivs[currentDiv].height(currentTallest);
+		     }
+		     rowDivs.length = 0; // empty the array
+		     currentRowStart = topPostion;
+		     currentTallest = $el.height();
+		     rowDivs.push($el);
+		   } else {
+		     rowDivs.push($el);
+		     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+		  }
+		   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+		     rowDivs[currentDiv].height(currentTallest);
+		   }
+		 });
+		}
+
+		$(window).load(function() {
+		  equalheight('.main section');
+		});
+
+
+		$(window).resize(function(){
+		  equalheight('.main section');
+		});
 
 /************************************************************************
 					Other Page Height Quick Fix
 ***************************************************************************/
-	  // var news_height = $('.bg-match-height').outerHeight();
-	  // $('.bg-fix').css('height',news_height);
+	  var news_height = $('.bg-match-height').outerHeight();
+	  $('.bg-fix').css('height',news_height);
 
 
 

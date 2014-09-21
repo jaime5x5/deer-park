@@ -56,26 +56,9 @@
 			<div class="col-xs-3 news-feed-background">
 				<div class="col-xs-3 news-feed">
 				  <h2>News Feed</h2>
-				  <?php
-				  	$args = array( 'posts_per_page' => 1 );
-					$lastposts = get_posts( $args );
-					foreach ( $lastposts as $post ) :
-					  setup_postdata( $post ); ?>
+				  
 					  <div id="fp-news-caption" class="col-xs-1 fp-news-caption">
 					  <p><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>				  
-					  <?php echo '<p>'.excerpt(15).'</p>'; ?>
-					  </div>
-					<?php
-					$thumbnails = get_posts( 'numberposts=1' );
-					foreach ( $thumbnails as $thumbnail ) {
-						if ( has_post_thumbnail( $thumbnail->ID ) ) {
-							echo '<a href="' . get_permalink( $thumbnail->ID ) . '" title="' . esc_attr( $thumbnail->post_title ) . '">';
-							echo get_the_post_thumbnail( $thumbnail->ID, 'full' );
-							echo '</a>';
-						}
-					}					  
-					endforeach; 
-					wp_reset_postdata(); ?>
 				</div>
 			</div>
       </div>

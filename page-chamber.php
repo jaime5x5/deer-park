@@ -39,7 +39,7 @@ if (has_post_thumbnail()) {
 	<div class="fluid-container">
 		<div class="container">
 			<div class="row">       
-				<div class="col-xs-8">
+				<div class="col-xs-8 chamber-cont">
 				<?php
 				// check if the flexible content field has rows of data
 				if( have_rows('chamber-content') ):
@@ -103,17 +103,17 @@ if (has_post_thumbnail()) {
 				if( have_rows('chamber-res-table') ):
 					 // loop through the rows of data
 					while ( have_rows('chamber-res-table') ) : the_row();
-						echo' <div class="col-xs-3">';
+						echo' <div class="col-xs-3 chamb-col">';
 						if( get_row_layout() == 'chamber-res-table-cols' ):
 							the_sub_field('chamber-res-table-col-1');
 						endif;
 						echo' </div>';
-						echo' <div class="col-xs-3">';
+						echo' <div class="col-xs-3 chamb-col">';
 						if( get_row_layout() == 'chamber-res-table-cols' ): 
 							the_sub_field('chamber-res-table-col-2');
 						endif;
 						echo' </div>';
-						echo' <div  class="col-xs-3">';
+						echo' <div  class="col-xs-3 chamb-col">';
 						if( get_row_layout() == 'chamber-res-table-cols' ): 
 							the_sub_field('chamber-res-table-col-3');
 						endif;
@@ -208,12 +208,12 @@ if (has_post_thumbnail()) {
 				if( have_rows('chamber-res-table') ):
 					 // loop through the rows of data
 					while ( have_rows('chamber-membership') ) : the_row();
-						echo' <div class="col-xs-5 col-xs-offset-1">';
+						echo' <div class="col-xs-5 col-xs-offset-1 chamber-membership-info-col-1">';
 						if( get_row_layout() == 'chamber-membership-info' ):
 							the_sub_field('chamber-membership-info-col-1');
 						endif;
 						echo' </div>';
-						echo' <div class="col-xs-5 col-xs-offset-1">';
+						echo' <div class="col-xs-5 col-xs-offset-1 chamber-membership-info-col-2">';
 						if( get_row_layout() == 'chamber-membership-info' ): 
 							the_sub_field('chamber-membership-info-col-2');
 						endif;

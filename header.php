@@ -104,28 +104,18 @@
 </style>
 </head>
 <body <?php body_class(); ?> data-spy="scroll" data-target=".wga_scrollspy" data-offset="120">
-<?php } ?>
-   
+<?php } ?>   
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          
+        <div class="navbar-header">         
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
+              <span>MENU</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
-          
-         <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="<?php echo $options['logo']; ?>" alt="Washington Clay Arts Association Logo"></a>
-        </div>
-        <div class="nav-button">
-          <button type="button" class="navbar-toggle secondary-nav-toggle" data-toggle="collapse" data-target=".secondary-navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+            </button>  
+         <a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img src="<?php echo $options['logo']; ?>" alt="Deer Park Chamber of Commerce"></a>
         </div>
         <div class="navbar-collapse collapse">
           <?php
@@ -136,17 +126,7 @@
               );
             wp_nav_menu( $args );
           ?>
-        <div class="secondary-navbar collapse sub-nav wga_scrollspy">
-          <ul class="nav navbar-nav main-nav wga_secondary_nav">
-            <li><a onClick="event.preventDefault(); wgaNavFunction(jQuery(this).attr('href'));" href="#home">Home</a></li>
-            <li><a onClick="event.preventDefault(); wgaNavFunction(jQuery(this).attr('href'))" href="#mission">Mission</a></li>
-            <li><a onClick="event.preventDefault(); wgaNavFunction(jQuery(this).attr('href'))" href="#about">About</a></li>
-            <li><a onClick="event.preventDefault(); wgaNavFunction(jQuery(this).attr('href'))" href="#events">Events</a></li>
-            <li><a onClick="event.preventDefault(); wgaNavFunction(jQuery(this).attr('href'))" href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.secondary-navbar -->
-        </div><!--/.navbar-collapse -->
-        
+        </div><!--/.navbar-collapse -->        
       </div>
     </div><!-- End of Navbar -->    
 
