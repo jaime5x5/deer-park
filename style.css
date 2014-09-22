@@ -317,6 +317,15 @@ div.wp-caption.alignright .wp-caption-text {
 .wga_secondary_nav {
 	display: none;
 }
+
+/******* acf-map**************/
+.acf-map {
+	width: 50%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+}
+/******* acf-map**************/
 .wrapper{
 	position: relative;
 	margin-top: 33%;
