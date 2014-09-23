@@ -1126,10 +1126,7 @@ ol.carousel-indicators {
 	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/white-bg.png');
 
 }
-div.sidebar:nth-child(1) {
-	background-color: rgba(0, 0, 0, .85);
-	list-style: none;
-}
+
 .widget ul li {
 	list-style: none;
 }
@@ -1471,6 +1468,29 @@ li.dropdown.open.active>.dropdown-toggle,
 	position: absolute;
 	top: 150px;
 }
+/*******************************************************************************
+							  Member-dir-posts 
+***************************************************************************/
+.dir-post-body{margin-top:110px; }
+.mem-dir-header{
+	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	margin-top:110px;
+}
+.mem-dir-header h3 {
+	color: #D9FFFF;
+	font-size: 2.25em;
+	font-weight: bolder;
+	vertical-align: middle;
+}
+.mem-dir-header div.col-md-10.sidebar { margin-top: 7px; color: #444; }
+.page-header { margin-top: -120px;}
+.co_services { margin-top: -350px;}
+.post-tags { margin-top: -70px;}
+.dir-test { margin: 20px 0 40px 0;}
+
+.post-cat-h ul li { list-style-type: none; display: -webkit-inline-box;}
+.post-cat-v{background-color: #FDEAB5;}
+.post-cat-v ul li { list-style-type: none;}
 /*******************************************************************************
 		Laptop 1366x768					  Media Queries 
 ***************************************************************************/
