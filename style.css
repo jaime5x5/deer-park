@@ -888,18 +888,22 @@ section#membership{
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	position: fixed;
+	position: relative;
 	top: 106px;
 
 }
 #mem-dir-title-search{
 	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
 	position: relative;
-	margin-top: 778px;
-	z-index: 10;
+	font-size: 48px;
+	color: #D9FFFF;
+}
+.mem-dir-title-search h3{
+	font-size: 48px;
+	color: #D9FFFF;
 }
 .valign-fix-container-mem-dir {
-	margin-top: -35px;
+	margin-top: 70px;
 }
 .directory-search{
 	float: right;
@@ -911,13 +915,14 @@ section#membership{
 	margin-top: 40px;
 	color: #444;
 }
-
+.directory-sidebar ul li { list-style: none;}
 .sidebar h3 {
 	color: #888888;
 }
 #mem-dir-body{
 	z-index: 10;
 	background-color:white;
+	height: 1575px
 }
 .bg-fill{
 	width: 100%;
@@ -926,23 +931,42 @@ section#membership{
 }
 .directory-sidebar{
 	float:right;
-	background-color: #F00;
-	height: 1450px;
+	background-color: #FDEAB5;
 
 }
+.post-rate{ margin-top: 25px;}
 .feat-business{
-
-	background-color: #008000;
+	background-color: white;
 	height: 500px;
-
 }
 .all-business{
-
-	background-color: #00F;
+	background-color: #C8DAC0;
 	height: 800px;
-
+	margin-top: 20px;
 }
-
+.all-business ul li {list-style: none;}
+.all-business ul li a {
+	font-size: 1.5em;
+	color: #AB6400;
+}
+.dir-mem-state{
+	text-align: left;
+	font-size: 30px;
+	font-weight: 900;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.ind-feat-bus { margin-bottom: 20px;}
+.dir-post-title h2{
+	font-weight: 900;
+	margin-left: -12%;
+}
+.dir-co_tag_line h3{
+	font-weight: 900;
+	margin-top: -5px;
+}
+.dir-co_street p{ color: black;}
+.dir-contact ul li{ list-style: none;}
 /*
  * jQuery FlexSlider v2.2.0
  * http://www.woothemes.com/flexslider/
@@ -1105,6 +1129,9 @@ ol.carousel-indicators {
 	line-height: 1;
 	width: 100%;
 }
+
+
+
 .news-sec-title {
 	position: relative;
 }
@@ -1482,7 +1509,7 @@ li.dropdown.open.active>.dropdown-toggle,
 	font-weight: bolder;
 	vertical-align: middle;
 }
-.mem-dir-header div.col-md-10.sidebar { margin-top: 7px; color: #444; }
+.mem-dir-header div.col-md-10.sidebar { margin-top: 7px; }
 .page-header { margin-top: -120px;}
 .co_services { margin-top: -350px;}
 .post-tags { margin-top: -70px;}

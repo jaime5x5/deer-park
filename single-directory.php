@@ -106,7 +106,7 @@
 
           <div class="col-xs-6 directory-post-rate" >
           <h3>Rate this business:</h3>
-          <div id="pd_rating_holder_7842252"></div>;
+          <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
           </div>
             <?php $sep = ", "; ?> 
             <div class="col-xs-6 post-tags">
