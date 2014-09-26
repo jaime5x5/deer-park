@@ -314,12 +314,5 @@
 
     })(jQuery);
     </script>
-    <script language="javascript">
-      PDRTJS_settings_7842252 = {
-      "id" : "7842252",
-      "unique_id" : "default",
-      "title" : "",
-      "permalink" : ""
-      }; </script>
-      <script language="javascript" src="http://i.polldaddy.com/ratings/rating.js"></script>
+
 <?php get_footer(); ?>

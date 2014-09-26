@@ -328,7 +328,7 @@ div.wp-caption.alignright .wp-caption-text {
 /******* acf-map**************/
 .wrapper{
 	position: relative;
-	margin-top: 33%;
+	margin-top: -124%;
 	left: 10%;
 	width: 300px;
 	height: 225px;
@@ -453,14 +453,11 @@ div.wp-caption.alignright .wp-caption-text {
 	padding: 0;
 	line-height: 0;
 }
-.front-image {
-	background-image: url("http://localhost/wordpress/wp-content/uploads/2014/08/home-summer.jpg");
+.front-image img{
 	background-size: cover;
-	background-repeat: no-repeat;
-	position: fixed;
-	width: 100%;
-	height: 880px;
-	top: 0px;
+	width: 130%;
+	height: 830px;
+	margin-top: -130px
 }
 .fp-dpcc-logo {
 	position: fixed;
@@ -527,9 +524,14 @@ article.post {
 	display: none	
 }
 /* Landing Page Mission Statement */
+.mission{
+	margin-top: -371px;
+	position: relative;
+	z-index: 300;
+	background-image: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+}
 .mission-cont{
 	margin-top: -1002px;
-	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
 	width: 100%;
 }
 .home section.mission {
@@ -571,22 +573,21 @@ section#about {
 	text-align: center;
 }
 #fp-news-caption { 
-	background-color: rgba(0, 0, 0, .4);
-	border-radius: 0 0 25px;
-	width: 60%;
-	position: absolute;
-	bottom: 38px;
-	left: 39.4%;
+	background-color: rgba(0, 0, 0, 0.4);
+	bottom: 110px;
+	left: 26.4%;
+	position: relative;
+	width: 71%;
+	padding: 5px 10px;
 }
 .news-feed a img{
-	border-radius: 25px;
-	margin: 20px 0 20px 100px;
-	max-width: 600px;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	margin-top: 30px;
 }
 .fp-news-caption p {
 	color:#D9FFFF;
-	width: 250px;
-	padding: 15px;	
 }
 .fp-news-caption p a {
 	color:#D9FFFF;
@@ -769,7 +770,8 @@ section#chamber-contact{ position: relative; z-index: 10;}
 	height: 340px;
 	z-index: 10;
 	width: 100%;
-	/*background: url('http://localhost/wordpress/wp-content/uploads/2014/09/antlers.png') 50% 100%  no-repeat, url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');*/
+	background-image: url("http://localhost/wordpress/wp-content/uploads/2014/09/antlers-contact-info-03.jpg");
+	background-size: cover;
 	text-align: center;
 }
 .contact-cat{
@@ -1436,12 +1438,11 @@ li.dropdown.open.active>.dropdown-toggle,
     filter:none;
 }
 /*******************************************************************************
-							  Gallery
+				Front Page Seasonal Area and Advertisements
 ***************************************************************************/
 #events-heading {
 	position:relative;
 	z-index: 400;
-	box-shadow: inset 5px 5px 50px #111;
 	overflow: hidden;
 	max-width: 100%;
 	background: #AB6400;
@@ -1458,42 +1459,63 @@ li.dropdown.open.active>.dropdown-toggle,
 	font-weight: 600;
 	font-size: 54px;
 }
-.image-gallery-col-1 {
-	width:45%;
-	margin-left: 7%;
+.deerpark-seas-ads h3 {
+	color: #D9FFFF;
+	font-size: 40px;
+	font-weight: 900;
 }
-.image-gallery-col-1 {
-	width: 40%;
-	float: left;
-	font-size: 18px;
-	margin-bottom: 3%;
-	margin-left: 9%;
+.deerpark-seas-ads h3 span {
+	font-size: 60px;
+	font-weight: bolder;
+}
+.deerpark-seas-ads p {
 	color: #D9FFFF;
 }
-.image-gallery-col-2 {
-	width: 40%;
-	float: right;
-	margin-bottom: 3%;
-	font-size: 18px;
-	margin-right: 7%;
-	color: #D9FFFF;
-}
-.deerpark-gallery .tiled-gallery {
-	margin-left:10%;
-}
-.tiled-gallery .tiled-gallery-item {
-	margin-right: -5px;
-}
-.fi-posts{
-	margin-top: 46px;
-	margin-left: 50px;
-	margin-right: auto;
-	bottom: 40px;
-}
-.posts {
-	float: right;
+.boxes { 
+   width: 95%;
+   margin:0 auto; 
+} 
+.boxes-2 { 
+	width: 95%;
 	position: absolute;
-	top: 150px;
+	margin-top: 553px;
+	margin-left: 43px;
+	float: none; 
+}
+.box { 
+   display:block; 
+   width:20%;
+   color:#fff; 
+   float: left;
+   padding: 10px;
+   box-sizing: border-box;
+}
+.box-1 { 
+   display:block; 
+   width:40%;
+   color:#fff; 
+   float: left;
+   padding: 10px;
+   box-sizing: border-box;
+}  
+.g-dyn.a-2.c-1 img {
+	width:100%;
+}
+.g-dyn.a-1.c-1 img {
+	width:100%;
+}
+
+/* 768px */ 
+@media only screen and (max-width:48em) { 
+   .boxes {  
+      display:table; 
+      width:100%;
+   } 
+   .box { 
+      width:90%;
+      margin: 0 auto;
+      float: none;
+   } 
 }
 /*******************************************************************************
 							  Member-dir-posts 
@@ -1521,7 +1543,7 @@ li.dropdown.open.active>.dropdown-toggle,
 /*******************************************************************************
 		Laptop 1366x768					  Media Queries 
 ***************************************************************************/
-@media (max-width:1366px){
+@media only screen and  (min-width:1024px) and (max-width:1366px){
 	.navbar-collapse ul{
 		margin-right: -16.9%;
 	}
@@ -1532,7 +1554,7 @@ li.dropdown.open.active>.dropdown-toggle,
 		height: 325px;
 	}
 	.valign-fix-container{
-		margin-top: 15%;
+		margin-top: 27%;
 	}
 	.news-feed a img {
 		margin: 20px 0 20px 10px;
