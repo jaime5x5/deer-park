@@ -7,34 +7,27 @@
 <?php get_header(); ?>
 <!-- page-front-page.php -->
     <!-- Landing Section Section -->
-    <section class="landing" id="home">		
+    <section id="home" class="landing">
+		<div class="container front-page">
 			<div class="row">
-				<div class="span12 front-image">
+				<div class="col-md-12 front-image">
 					<?php if( get_field('front_page_image') ): ?>
 
 						<img src="<?php the_field('front_page_image'); ?>" />
 
 					<?php endif; ?>
 				</div>
-				<div class="fp-dpcc-logo"></div>
-			</div>
-		</div>
-      <!-- <h1 class="hide">&nbsp;</h1> -->
-    </section>
-    <!-- Content for landing Section should only contain the landing page logo. -->
-
-  <!-- Misison Statment Section -->
-  <div class="fluid-container">
-		<div class="row">
-			<div class="col-xs-3">
-				<div class="wrapper">
+				
+				<div class="col-md-3 wrapper">
 					<div id="weatherList" class="weatherList"></div>
 					<div id="weatherReport" class="weatherFeed"></div>
+					<div class="col-md-3 col-md-offset-6 fp-dpcc-logo"></div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
-	
+  </section>	
   <section id="mission" class="mission">
         <div class="fluid-container valign-fix-container">		
           <div class="container">
@@ -52,7 +45,7 @@
   <section class="about" id="about">
     <div class="fluid-container">
       <div class="row news-feed-hotfix">
-			<div class="col-xs-5 col-xs-offset-1 about-section">
+			<div class="col-md-5 col-md-offset-1 about-section">
 				<?php
 				// Create second WordPress loop
 				$page_content = new WP_Query( 'page_id=72' );
@@ -66,8 +59,8 @@
 				// Don't forget to reset the post data!
 				wp_reset_postdata(); ?>
 			</div>
-			<div class="col-xs-5 news-feed-background">
-				<article class="news-feed">
+			<div class="col-md-5 news-feed-background">
+				<div class="news-feed">
 				  <?php
 				  	$args = array( 'posts_per_page' => 1, 'category_name' => 'featured', );					
 				  	$thumbnails = get_posts( $args );
@@ -94,7 +87,7 @@
 					  <?php echo '<p>'.excerpt(15).'</p>'; ?>
 					  </div>
 					<?php wp_reset_postdata(); ?>
-				</article>
+				</div>
 			</div>
       </div>
     </div>
@@ -125,52 +118,33 @@
 	                endif;
 	                ?>
 			</div>
-			<div class="boxes">			  
-				<div class="two box-1">
-			    	<?php echo adrotate_group(1); ?>
-			  	</div> 
-				<div class="one box">
-				   	<?php echo adrotate_group(2); ?>
-				</div> 
-				<div class="three box">
-				   	<?php echo adrotate_group(2); ?>
-				</div> 
-			    <div class="four box">
-			    	<?php echo adrotate_group(2); ?>
-			    </div> 
+			<div class="col-md-12 wrapper-ads-lower">
+				<div class="boxes">			  
+					<div class="two box-1">
+						<?php echo adrotate_group(1); ?>
+					</div> 
+					<div class="one box">
+						<?php echo adrotate_group(2); ?>
+					</div> 
+					<div class="three box">
+						<?php echo adrotate_group(3); ?>
+					</div> 
+					<div class="four box">
+						<?php echo adrotate_group(4); ?>
+					</div> 
+				</div>
+				<div class="boxes">
+					<div class="one box">
+						<?php echo adrotate_group(5); ?>
+					</div> 
+					<div class="three box">
+						<?php echo adrotate_group(6); ?>
+					</div> 
+					<div class="four box">
+						<?php echo adrotate_group(7); ?>
+					</div> 
+				</div>
 			</div>
-			<div class="boxes">
-			    <div class="one box">
-			   		<?php echo adrotate_group(2); ?>
-			    </div> 
-			    <div class="three box">
-			    	<?php echo adrotate_group(2); ?>
-			    </div> 
-			    <div class="four box">
-			    	<?php echo adrotate_group(2); ?>
-			    </div> 
-			</div>
-			<script src="wp-content/themes/deer-park/js/gsap/jquery.gsap.min.js">
-			function equalHeight(group) {
-			   tallest = 0;
-			   group.each(function() {
-			      thisHeight = $(this).height();
-			      if(thisHeight > tallest) {
-			         tallest = thisHeight;
-			      }
-			   });
-			   group.height(tallest);
-			}
-
-			$(document).ready(function() {
-			   equalHeight($(".box"));
-			});
-
-			$(window).resize(function() {
-			   $('.box').css('height','auto');
-			   equalHeight($(".box"));
-			});
-			</script>
 		</div>
 	</div>
   </section>

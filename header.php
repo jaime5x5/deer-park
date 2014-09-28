@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/images/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
 
@@ -15,8 +15,8 @@
 <?php wp_head(); ?>
 <link href="<?php bloginfo( 'template_directory' );?>/bootstrap/css/bootstrap.css" rel='stylesheet' type='text/css'>
 <link href="<?php bloginfo( 'template_directory' );?>/style.css" rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="//use.typekit.net/yda7qvw.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
   <!--[if lt IE 9]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

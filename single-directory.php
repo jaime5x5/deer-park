@@ -4,10 +4,10 @@
 <section class="mem-dir-header">
 <div class="container ">
   <div class="row">       
-    <div class="col-xs-9">
+    <div class="col-md-9">
         <h3>Member Directory</h3>     
     </div>
-    <div class="col-xs-3">
+    <div class="col-md-3">
       <div class="mem-dir-header-search">
         <?php get_sidebar('sidebar-blog'); ?>     
       </div>
@@ -15,16 +15,12 @@
   </div>
 </div>
 </section>
-    <div class="container">
+<div class="container single-dir-post">
       <div class="row">
-        <div class="col-xs-9  dir-post-body">
-
-          <article>
+        <div class="col-md-9  dir-post-body">
             <div class="page-header">
               <h2><?php the_title(); ?></h2>
               <?php
-              
-              // check if the flexible content field has rows of data
               if( have_rows('directory_post') ):
 
                    // loop through the rows of data
@@ -63,7 +59,6 @@
                         echo '</p>';
                         echo '</div>';
                       endif;
-
                       if( get_row_layout() == 'directory_listing' ): 
                         echo '<div class="co_street">';
                           the_sub_field('co_street');
@@ -102,112 +97,58 @@
 
               endif;
               ?>
-          </article>
-
-          <div class="col-xs-6 directory-post-rate" >
+          </div>          
+          <div class="col-md-3 post-cat-v">
+          <h3>Categories:</h3>             
+            <ul>
+              <li><a href="http://localhost/wordpress/tag/agriculture/" title="Agriculture" class="agriculture">Agriculture</a></li>
+              <li><a href="http://localhost/wordpress/tag/automotive/" title="Automotive" class="automotive">Automotive</a></li>
+              <li><a href="http://localhost/wordpress/tag/building-construction/" title="Building & Construction" class="building-construction">Building & Construction</a></li>
+              <li><a href="http://localhost/wordpress/tag/business-services/" title="Business Services" class="business-services">Business Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/community-services/" title="Community Services" class="community-services">Community Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/education/" title="Education" class="education">Education</a></li>
+              <li><a href="http://localhost/wordpress/tag/emergency-services/" title="Emergency Services" class="emergency-services">Emergency Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/entertainment/" title="Entertainment" class="entertainment">Entertainment</a></li>
+              <li><a href="http://localhost/wordpress/tag/finance/" title="Finance" class="finance">Finance</a></li>
+              <li><a href="http://localhost/wordpress/tag/food-dining/" title="Food & Dining" class="food-dining">Food & Dining</a></li>
+              <li><a href="http://localhost/wordpress/tag/government/" title="Government" class="government">Government</a></li>
+              <li><a href="http://localhost/wordpress/tag/health-medical/" title="Health & Medical" class="health-medical">Health & Medical</a></li>
+              <li><a href="http://localhost/wordpress/tag/legal-services/" title="Legal Services" class="legal-services">Legal Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/manufacturing-industrial/" title="Manufacturing & Industrial" class="manufacturing-industrial">Manufacturing & Industrial</a></li>
+              <li><a href="http://localhost/wordpress/tag/news-media/" title="News & Media" class="news-media">News & Media</a></li>
+              <li><a href="http://localhost/wordpress/tag/office-printing/" title="Office & Printing" class="office-printing">Office & Printing</a></li>
+              <li><a href="http://localhost/wordpress/tag/organizations-clubs/" title="Organizations & Clubs" class="organizations-clubs">Organizations & Clubs</a></li>
+              <li><a href="http://localhost/wordpress/tag/other-services/" title="Other Services" class="other-services">Other Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/personal-services/" title="Personal Services" class="personal-services">Personal Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/professional-services/" title="Professional Services" class="professional-services">Professional Services</a></li>
+              <li><a href="http://localhost/wordpress/tag/real-estate/" title="Real Estate" class="real-estate">Real Estate</a></li>
+              <li><a href="http://localhost/wordpress/tag/shopping/" title="Shopping" class="shopping">Shopping</a></li>
+              <li><a href="http://localhost/wordpress/tag/transportation/" title="Transportation" class="transportation">Transportation</a></li>
+              <li><a href="http://localhost/wordpress/tag/travel-tourism/" title="Travel & Tourism" class="travel-tourism">Travel & Tourism</a></li>
+              <li><a href="http://localhost/wordpress/tag/utilities/" title="Utilities" class="utilities">Utilities</a></li>
+            </ul>
+        </div>
+          <div class="col-md-4 directory-post-rate" >
           <h3>Rate this business:</h3>
           <?php if(function_exists('the_ratings')) { the_ratings(); } ?>
           </div>
             <?php $sep = ", "; ?> 
-            <div class="col-xs-6 post-tags">
+            <div class="col-md-4 post-tags">
               <h3>Category tags:</h3>
-              <?php the_tags( '', $sep, '' ); ?>
+              <?php $tag_id = 1; ?>
+              <a href="<?php echo get_tag_link($tag_id); ?>">tag name</a>
             </div>
-            <div class="col-xs-12 dir-test">
+            <div class="col-md-8 dir-test">
               <?php
                   the_field('directory_testimonial');
               ?>
             </div>
             <hr>
-            <div class="col-xs-12 post-cat-h">
-             <h3>Categories:</h3>
-              <ul>
-                <li><a href="">Accounting & Booking Services | </a></li>
-                <li><a href="">Advertising | </a></li>
-                <li><a href="">Aircraft and Airport Services | </a></li>
-                <li><a href="">Architecture & Design | </a></li>
-                <li><a href="">Attorney & Legal | </a></li>
-                <li><a href="">Autombile | </a></li>
-                <li><a href="">Banks & Credit Unions | </a></li>
-                <li><a href="">Beauty & Salons | </a></li>
-                <li><a href="">Builders & Contractors | </a></li>
-                <li><a href="">Building Supplies | </a></li>
-                <li><a href="">Butcher | </a></li>
-                <li><a href="">Care Giving & Adult Services | </a></li>
-                <li><a href="">Citizen | </a></li>
-                <li><a href="">Community Organization | </a></li>
-                <li><a href="">Computer & Technology Repair | </a></li>
-                <li><a href="">Convienance Stores | </a></li>
-                <li><a href="">Delivery & Freight Services | </a></li>
-                <li><a href="">Education, Schools & Daycare | </a></li>
-                <li><a href="">Emergency Services | </a></li>
-                <li><a href="">Farmer’s Markets | </a></li>
-                <li><a href="">Financial Services | </a></li>
-                <li><a href="">Fitness | </a></li>
-                <li><a href="">Funeral Homes | </a></li>
-                <li><a href="">Golf | </a></li>
-                <li><a href="">Grocery | </a></li>
-                <li><a href="">Grooming & Pet Services | </a></li>
-                <li><a href="">Heating & AC | </a></li>
-                <li><a href="">Indoor Recreation | </a></li>
-                <li><a href="">Insurance | </a></li>
-                <li><a href="">Library & Books | </a></li>
-                <li><a href="">Lodging & Accomodations | </a></li>
-                <li><a href="">Manufacturing | </a></li>
-                <li><a href="">Medical Services | </a></li>
-                <li><a href="">Newspaper & Printing | </a></li>
-                <li><a href="">Non-Profit Organizations | </a></li>
-                <li><a href="">Nurseries | </a></li>
-                <li><a href="">Physical Therapy | </a></li>
-                <li><a href="">Plumbing</a></li>
-              </ul> 
-            </div>
-        </div>
-        <div class="col-xs-3 post-cat-v">
-		      <h3>Categories:</h3>
-          <ul>
-            <li><a href="">Accounting & Booking Services</a></li>
-            <li><a href="">Advertising</a></li>
-            <li><a href="">Aircraft and Airport Services</a></li>
-            <li><a href="">Architecture & Design</a></li>
-            <li><a href="">Attorney & Legal</a></li>
-            <li><a href="">Autombile</a></li>
-            <li><a href="">Banks & Credit Unions</a></li>
-            <li><a href="">Beauty & Salons</a></li>
-            <li><a href="">Builders & Contractors</a></li>
-            <li><a href="">Building Supplies</a></li>
-            <li><a href="">Butcher</a></li>
-            <li><a href="">Care Giving & Adult Services</a></li>
-            <li><a href="">Citizen</a></li>
-            <li><a href="">Community Organization</a></li>
-            <li><a href="">Computer & Technology Repair</a></li>
-            <li><a href="">Convienance Stores</a></li>
-            <li><a href="">Delivery & Freight Services</a></li>
-            <li><a href="">Education, Schools & Daycare</a></li>
-            <li><a href="">Emergency Services</a></li>
-            <li><a href="">Farmer’s Markets</a></li>
-            <li><a href="">Financial Services</a></li>
-            <li><a href="">Fitness</a></li>
-            <li><a href="">Funeral Homes</a></li>
-            <li><a href="">Golf</a></li>
-            <li><a href="">Grocery</a></li>
-            <li><a href="">Grooming & Pet Services</a></li>
-            <li><a href="">Heating & AC</a></li>
-            <li><a href="">Indoor Recreation</a></li>
-            <li><a href="">Insurance</a></li>
-            <li><a href="">Library & Books</a></li>
-            <li><a href="">Lodging & Accomodations</a></li>
-            <li><a href="">Manufacturing</a></li>
-            <li><a href="">Medical Services</a></li>
-            <li><a href="">Newspaper & Printing</a></li>
-            <li><a href="">Non-Profit Organizations</a></li>
-            <li><a href="">Nurseries</a></li>
-            <li><a href="">Physical Therapy</a></li>
-            <li><a href="">Plumbing</a></li>
-          </ul>
-        </div>
+
+        </div>    
+
       </div>
-    </div>
+</div>
     <script type="text/javascript">
       (function($) {
 

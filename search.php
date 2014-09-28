@@ -3,18 +3,11 @@
  
 get_header(); ?>
  <!-- search.php -->
- <style>
-    section#primary {
-        margin-top: 122px;
-    }
- </style>
         
 <div class="search container navbar-fix">
-        
- 
             <?php if ( have_posts() ) : ?>
  
-                <header class="page-header">
+                <header class="page-header-src">
                     <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'WGA' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
                 </header><!-- .page-header -->
  

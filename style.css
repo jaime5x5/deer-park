@@ -1,8 +1,8 @@
 /*
 Theme Name: Deer Park Chamber of Commerce
-Theme URI: http://dev4dollars.com
+Theme URI: http://deerparkchamber.com
 Author: Jaime Williams
-Author URI: http://dev4dollars.com
+Author URI: http://deerparkchamber.com
 Description: Designed to assist users and administrators in the delivery of relevant and responsive information.
 Version: 1.0
 License: GNU General Public License v2 or later
@@ -326,9 +326,10 @@ div.wp-caption.alignright .wp-caption-text {
 	margin: 20px 0;
 }
 /******* acf-map**************/
+
+/*******Weather front page**************/
 .wrapper{
 	position: relative;
-	margin-top: -124%;
 	left: 10%;
 	width: 300px;
 	height: 225px;
@@ -427,17 +428,20 @@ div.wp-caption.alignright .wp-caption-text {
 	text-align: center;
 	padding: 5px;
 }
-/* Front Page Slideshow */
-
-/* Landing Section */
-.landing { 
-	/* position: absolute;
-	background-position: relative; */
+/*****End Front-Page Weather********/
+.front-page {
+	margin:0;
+	padding: 0;
+	width:100%;
+}
+.front-image{ padding:0;}
+.front-image img{
+	padding:0;
+	width:100%;
+	position:fixed;
+	top:0;
 }
 .home section.landing {
-	background: #D7B99D;
-	max-width: 100%;
-	display: inline-block;
 }
 .landing_logo {
 	width: 100%;
@@ -452,12 +456,6 @@ div.wp-caption.alignright .wp-caption-text {
 	margin: 0;
 	padding: 0;
 	line-height: 0;
-}
-.front-image img{
-	background-size: cover;
-	width: 130%;
-	height: 830px;
-	margin-top: -130px
 }
 .fp-dpcc-logo {
 	position: fixed;
@@ -554,7 +552,7 @@ article.post {
       display:table;
       height:auto;
       width: 100%;
-	  margin-top: 19%;
+	  margin-top: 45%;
 }
     
 /* Landing Page About Section */
@@ -901,15 +899,18 @@ section#membership{
 	color: #D9FFFF;
 }
 .mem-dir-title-search h3{
-	font-size: 48px;
+	margin-top: 58px;
 	color: #D9FFFF;
+	font-size: 34px;
+	margin-bottom: 25px;
+	vertical-align: middle;
 }
 .valign-fix-container-mem-dir {
-	margin-top: 70px;
+	margin-top: 58px;
 }
 .directory-search{
 	float: right;
-	margin-top: -40px;
+	margin-top: -15px;
 	margin-bottom: 40px;
 	margin-right: -150px;
 }
@@ -957,6 +958,7 @@ section#membership{
 	font-weight: 900;
 	margin-bottom: 20px;
 	padding: 10px;
+	margin-left: 80px;
 }
 .ind-feat-bus { margin-bottom: 20px;}
 .dir-post-title h2{
@@ -1067,7 +1069,7 @@ html[xmlns] .slides {display: block;}
 }
 /* News Page */
 div#custom-news-slideshow {
-	margin-top: 118px;
+	margin-top: 110px;
 }
 a.right.carousel-control {
 	display: none;
@@ -1415,7 +1417,7 @@ div#ai1ec-container {
 							result Page
 ************************************************************************/
 .valign-fix-container-result{
-	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
+	background: url('http:http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
 	margin-top: 130px;
 }
 /****************************************************************************
@@ -1472,16 +1474,9 @@ li.dropdown.open.active>.dropdown-toggle,
 	color: #D9FFFF;
 }
 .boxes { 
-   width: 95%;
+   width: 100%;
    margin:0 auto; 
 } 
-.boxes-2 { 
-	width: 95%;
-	position: absolute;
-	margin-top: 553px;
-	margin-left: 43px;
-	float: none; 
-}
 .box { 
    display:block; 
    width:20%;
@@ -1498,12 +1493,15 @@ li.dropdown.open.active>.dropdown-toggle,
    padding: 10px;
    box-sizing: border-box;
 }  
-.g-dyn.a-2.c-1 img {
-	width:100%;
-}
-.g-dyn.a-1.c-1 img {
-	width:100%;
-}
+.g-dyn.a-2.c-1 a img {width:100%;}
+.g-dyn.a-3.c-2 img {width:100%;}
+.g-single.a-4 img {width:100%;}
+.g-dyn.a-1.c-1 img {width:100%;}
+.g-single.a-2 a img {width:100%;}
+.g-dyn.a-2.c-1 a img {width:100%;}
+.g-dyn.a-4.c-2 img {width:100%;}
+.g-single.a-4 img {width:100%;}
+
 
 /* 768px */ 
 @media only screen and (max-width:48em) { 
@@ -1518,8 +1516,20 @@ li.dropdown.open.active>.dropdown-toggle,
    } 
 }
 /*******************************************************************************
+							  Single-posts 
+***************************************************************************/
+.page-header-sng { margin-top: 110px;}
+.sb-sing-post { margin-top: 71px;}
+/*******************************************************************************
+							 archive-result 
+***************************************************************************/
+.archive {margin-top: 210px;}
+page-header-arc {margin-top: 110px;}
+
+/*******************************************************************************
 							  Member-dir-posts 
 ***************************************************************************/
+.single-dir-post {with:100%; padding:0;}
 .dir-post-body{margin-top:110px; }
 .mem-dir-header{
 	background: url('http://localhost/wordpress/wp-content/themes/deer-park/images/mission-fill.png');
@@ -1533,12 +1543,13 @@ li.dropdown.open.active>.dropdown-toggle,
 }
 .mem-dir-header div.col-md-10.sidebar { margin-top: 7px; }
 .page-header { margin-top: -120px;}
+
 .co_services { margin-top: -350px;}
-.post-tags { margin-top: -70px;}
+.post-tags { margin-top: 0;}
 .dir-test { margin: 20px 0 40px 0;}
 
 .post-cat-h ul li { list-style-type: none; display: -webkit-inline-box;}
-.post-cat-v{background-color: #FDEAB5;}
+.post-cat-v{background-color: #FDEAB5; float: right;}
 .post-cat-v ul li { list-style-type: none;}
 /*******************************************************************************
 		Laptop 1366x768					  Media Queries 
@@ -1554,17 +1565,20 @@ li.dropdown.open.active>.dropdown-toggle,
 		height: 325px;
 	}
 	.valign-fix-container{
-		margin-top: 27%;
+		margin-top: 50%;
 	}
 	.news-feed a img {
-		margin: 20px 0 20px 10px;
+		margin: 40px 0 20px 0;
 	}
 	#fp-news-caption {
-		left: 50.4%;
-		bottom: 41px;
+		left:50px;
+		bottom: 150px;
 	}
 	.news-sec-title {
-		margin-top: 652px;
+		margin-top: 0;
+	}
+	.calendar-title{
+		margin-top: 110px;
 	}
 }
 /*******************************************************************************
@@ -1633,8 +1647,8 @@ li.dropdown.open.active>.dropdown-toggle,
 ***************************************************************************/
 @media (max-width:340px) {
 	.wrapper {
-		left: -10px;
-		bottom: -35px;
+		left: 5px;
+		bottom: -134px;
 	}
 	.navbar-brand img {
 		max-height: 50px;
@@ -1716,22 +1730,14 @@ li.dropdown.open.active>.dropdown-toggle,
     .collapsing {
         overflow: hidden!important;
     }
-	.front-image {
-		background-image: url("http://localhost/wordpress/wp-content/uploads/2014/08/home-summer.jpg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		position: fixed;
-		width: 100%;
-		height: 480px;
-		top: 60px;
+	.front-image img{
+		margin-top: 90px;
 	}
 	.fp-dpcc-logo {
-		position: fixed;
-		right: 0;
-		bottom: -55px;
+		bottom: 493px;
 		background-size: 80px;
 		width: 100px;
-		height: 125px
+		height: 125px;
 	}
 	.home img.alignnone.size-full{
 		width: 300px;
@@ -1773,7 +1779,7 @@ li.dropdown.open.active>.dropdown-toggle,
 		line-height: 24px;
 	}
 	.valign-fix-container {
-		margin-top: 65%;
+		margin-top: 167%;
 	}
 	.home .mission h3 {
 		font-size: 34px;
@@ -1807,12 +1813,18 @@ li.dropdown.open.active>.dropdown-toggle,
 	}
 	.news-feed a img{
 		width: 300px;
-		height: 400px;
 		margin-left: -10px;
 	}
-	#fp-news-caption{
-		bottom: 38px;
-		left: 39.4%;
+	#fp-news-caption {
+		background-color: rgba(0, 0, 0, 0.4);
+		bottom:0;
+		left:0;
+		position: relative;
+		padding: 5px 10px;
+		width:100%;
+	}
+	.box-1 {
+		width: 100%;
 	}
 	.fp-news-caption p{
 		width: 200px;

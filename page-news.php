@@ -79,9 +79,9 @@
                     $args = array(
                       'post_type' => 'post',
                       'category_name' => 'news',
+                      'posts_per_page' => 15,
                       );
                       $the_query = new WP_Query( $args );
-                  // The Loop
                   if ( $the_query->have_posts() ) :
                   while ( $the_query->have_posts() ) : $the_query->the_post();
                 ?> 
